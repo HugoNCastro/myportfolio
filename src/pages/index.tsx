@@ -1,4 +1,5 @@
 import { Header } from '../components/Header/index';
+import { ParallaxElement } from '../components/Parallax';
 import { Section } from '../components/Section'
 
 export default function Home(){
@@ -6,6 +7,7 @@ export default function Home(){
     <>
       <Header />
       <Section />
+      <ParallaxElement />
     </>
   )
 }
