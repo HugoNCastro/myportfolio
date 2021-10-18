@@ -11,7 +11,7 @@ export function Bio({ widthValue }: BioProps) {
     >
       <Fade
         in={widthValue === 90}
-        delay={0.5}
+        delay={0.2}
         unmountOnExit={true}
       >
         <Box
@@ -27,7 +27,7 @@ export function Bio({ widthValue }: BioProps) {
 
       <Fade
         in={widthValue === 90}
-        delay={0.8}
+        delay={0.2}
         unmountOnExit={true}
       >
         <Box
@@ -44,7 +44,7 @@ export function Bio({ widthValue }: BioProps) {
 
       <Fade
         in={widthValue === 90}
-        delay={0.8}
+        delay={0.2}
         unmountOnExit={true}
       >
         <Box

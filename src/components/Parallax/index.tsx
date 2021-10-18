@@ -7,9 +7,14 @@ export function ParallaxElement() {
   return (
     <>
       <Parallax
+
         bgImage="https://image.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg"
-        strength={200}
-        blur={10}
+        strength={500}
+        bgImageSizes="30rem"
+        blur={{min: -10, max: 10 }}
+        style={{
+          height: "20rem",
+        }}
       >
         <Text
           fontSize="10rem"
@@ -26,8 +31,9 @@ export function ParallaxElement() {
       </Flex>
       <Parallax
         bgImage="https://image.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg"
-        strength={200}
-        blur={10}
+        strength={-500}
+        bgImageSizes="30rem"
+        blur={{min: -10, max: 10 }}
       >
         <Text
           fontSize="10rem"

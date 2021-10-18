@@ -2,10 +2,20 @@ import { Flex } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { Name } from "../Name/index"
 import { Bio } from '../Bio/index'
+
+
 export function Section() {
   const [widthValue, setWidthValue] = useState(50);
 
   useEffect(() => {
+    function scrollEvent(){
+      if(document.documentElement.scrollTop === 0){
+        window.document.body.style.overflowY = 'hidden';
+      }
+
+      console.log(document.documentElement.scrollTop);
+    }
+
     function wheelEvent(evt: WheelEvent) {
       const delta = Math.sign(evt.deltaY);
       if (delta === 1) {
@@ -13,12 +23,18 @@ export function Section() {
       } else {
         setWidthValue(50);
       }
+
+      if(widthValue === 90){
+        window.document.body.style.overflowY = 'auto';
+      } 
     }
 
-    window.addEventListener("wheel", wheelEvent);
-
+    window.addEventListener("wheel", wheelEvent)
+    window.addEventListener("scroll", scrollEvent)
+    
     return () => {
       window.removeEventListener("wheel", wheelEvent)
+      window.removeEventListener("scroll", scrollEvent)
     }
   }, [widthValue])
 
@@ -31,7 +47,7 @@ export function Section() {
         padding="1rem"
         justifyContent="space-between"
         borderRadius=" 0 2.5rem 2.5rem 0"
-        transition="0.7s"
+        transition="0.9s"
         style={{ width: `${widthValue}%` }}
       >        
           <Bio 

@@ -35,6 +35,20 @@
 }
 
 body {
-  background-color: var(--white);
+  overflow: hidden;
+  padding-right: 0.09rem; 
 }
+
+body::-webkit-scrollbar {
+  width: 0.09rem;  
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--green);
+  border-radius: 25rem;
+}
+
+
 
